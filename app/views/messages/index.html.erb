@@ -1,0 +1,23 @@
+<section class="min-h-screen flex flex-col gap-10 items-center justify-center px-8 py-12">
+  <!-- Title and Tagline -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-bold mb-4">My Messages</h1>
+    <p class="text-lg text-gray-600">Take the messages with a pinch of salt.</p>
+  </div>
+
+  <!-- Messages -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl">
+    <%= @messages.each do |message| %>
+
+      <!-- message Card -->
+      <div class="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition-shadow max-w-lg">
+        <h2 class="text-xl font-semibold text-blue-500 mb-2"><%= message.subject %></h2>
+        <p class="text-gray-600 mb-4">A personalized learning platform that tracks Quran memorization progress.</p>
+        <p class="text-sm text-gray-500 mb-4">Content: <%= message.content %></p>
+        <p class="text-sm text-gray-500 mb-4"><%= message.name %></p>
+      </div>
+
+      
+    <% end %>
+  </div>
+</section>

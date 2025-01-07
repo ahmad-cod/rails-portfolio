@@ -7,32 +7,33 @@
 
     <!-- Contact Form -->
     <div class="bg-white shadow-lg rounded-lg p-8 max-w-lg w-full fade-in">
-      <form action="#" method="POST" class="space-y-6">
+      <form action="/messages" method="POST" class="space-y-6">
         <!-- Full Name -->
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
-          <input type="text" id="name" name="name" required
+          <input type="text" id="name" name="message[name]" required
             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
         </div>
 
         <!-- Email -->
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-          <input type="email" id="email" name="email" required
+          <input type="email" id="email" name="message[email" ]required
             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
         </div>
 
         <!-- Subject -->
         <div>
           <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
-          <input type="text" id="subject" name="subject" required
+          <input type="text" id="subject" name="message[subject]" required
             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
         </div>
 
         <!-- Message -->
         <div>
-          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-          <textarea id="message" name="message" rows="4" required
+          <label for="content" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="content" name="message[content]" rows="4" required
             class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
         </div>
 

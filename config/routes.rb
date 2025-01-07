@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get "/works", to: "pages#works"
   get "/contact", to: "pages#contact"
 
+  resources :messages, only: [:create, :index]
+
   root "pages#home"
   # Defines the root path route ("/")
 end
