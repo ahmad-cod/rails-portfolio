@@ -1,0 +1,52 @@
+<section class="flex flex-col items-center justify-center px-6 py-12">
+    <!-- Title and Subtitle -->
+    <div class="text-center mb-12 fade-in">
+      <h1 class="text-4xl font-bold mb-4">Get in Touch</h1>
+      <p class="text-lg text-gray-600">I'd love to hear from you! Feel free to reach out with any questions or opportunities.</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="bg-white shadow-lg rounded-lg p-8 max-w-lg w-full fade-in">
+      <form action="#" method="POST" class="space-y-6">
+        <!-- Full Name -->
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+          <input type="text" id="name" name="name" required
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email" required
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <!-- Subject -->
+        <div>
+          <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+          <input type="text" id="subject" name="subject" required
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+          <textarea id="message" name="message" rows="4" required
+            class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <button type="submit"
+            class="w-full bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-transform transform hover:scale-105">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Decorative Animations -->
+    <div class="absolute top-24 left-0 md:left-20 w-28 h-28 bg-slate-400 rounded-full opacity-20 animate-pulse"></div>
+    <div class="absolute bottom-0 right-0 w-32 h-32 bg-blue-300 rounded-full opacity-20 animate-pulse"></div>
+  </section>
