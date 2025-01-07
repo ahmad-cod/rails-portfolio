@@ -1,16 +1,35 @@
-<!-- # create a beautiful navbar styled with tailwind css consisting of a text logo, 
-# nav items; about, works, contacts and resume
--->
-<header class="w-full bg-slate-900 text-white py-4 px-6 z-10">
-<div class="flex justify-between align-center">
-  <div class="py-2 font-bold text-2xl">ANA</div>
-  <nav>
-    <ul class="flex gap-10 justify-center align-center" >
-        <li class="p-2 text-white hover:text-gray-100"><%= link_to 'Home', root_path %></li>
-        <li class="p-2 text-white hover:text-gray-100"><%= link_to 'About', about_path %></li>
-        <li class="p-2 text-white hover:text-gray-100"><%= link_to 'Works', works_path %></li>
-        <li class="p-2 text-white hover:text-gray-100"><%= link_to 'Contact', contact_path %></li>
-    </ul>
-  </nav>
-</div>
+<header class="w-full bg-slate-900 text-white py-4 px-4 md:px-10 z-10">
+  <div class="flex justify-between items-center">
+    <!-- Logo -->
+    <div class="py-2 font-bold text-2xl">ANA</div>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:block">
+      <ul class="flex gap-4 md:gap-10 justify-center items-center">
+        <li class="p-2 text-white hover:text-gray-300 transition-colors"><%= link_to 'Home', root_path %></li>
+        <li class="p-2 text-white hover:text-gray-300 transition-colors"><%= link_to 'About', about_path %></li>
+        <li class="p-2 text-white hover:text-gray-300 transition-colors"><%= link_to 'Works', works_path %></li>
+        <li class="p-2 text-white hover:text-gray-300 transition-colors"><%= link_to 'Contact', contact_path %></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-menu" class="hidden md:hidden mt-4">
+    <nav>
+      <ul class="flex flex-col space-y-2">
+        <li class="p-2 text-white hover:text-gray-300 transition-colors"><%= link_to 'Home', root_path %></li>
+        <li class="p-2 text-white hover:text-gray-300 transition-colors"><%= link_to 'About', about_path %></li>
+        <li class="p-2 text-white hover:text-gray-300 transition-colors"><%= link_to 'Works', works_path %></li>
+        <li class="p-2 text-white hover:text-gray-300 transition-colors"><%= link_to 'Contact', contact_path %></li>
+      </ul>
+    </nav>
+  </div>
 </header>
