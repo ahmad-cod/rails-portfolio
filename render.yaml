@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: anaroyehun
+    env: ruby
+    buildCommand: bundle install && bundle exec rake assets:precompile && bundle exec rake db:migrate
+    startCommand: bundle exec puma -C config/puma.rb
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: RAILS_MASTER_KEY
+        sync: false
+    plan: free
+    branch: main 
