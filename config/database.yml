@@ -81,9 +81,10 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    url: <%= ENV['DATABASE_URL'] %>
-    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 20 } %>
-    sslmode: require
+    database: db/production.sqlite3
+    # url: <%= ENV['DATABASE_URL'] %>
+    # pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 20 } %>
+    # sslmode: require
   cache:
     <<: *primary_production
     database: portfolio_production_cache
